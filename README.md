@@ -63,8 +63,9 @@ can be used freely with other widgets together.
 
 
 >## Change Log
-> v1.2.0
+   > v1.2.0
     - Add SlidingTabExPageLayout
+    
   > v1.1.3
     - Fix bug
   > v1.1.2
