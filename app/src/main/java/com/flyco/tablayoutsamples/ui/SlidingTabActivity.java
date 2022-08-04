@@ -3,14 +3,17 @@ package com.flyco.tablayoutsamples.ui;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Toast;
 
+import com.flyco.tablayout.SlidingTabExPageLayout;
 import com.flyco.tablayout.SlidingTabLayout;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.flyco.tablayout.widget.MsgView;
@@ -62,24 +65,39 @@ public class SlidingTabActivity extends AppCompatActivity implements OnTabSelect
         /** indicator圆角色块 */
         SlidingTabLayout tabLayout_9 = ViewFindUtils.find(decorView, R.id.tl_9);
         /** indicator圆角色块 */
-        SlidingTabLayout tabLayout_10 = ViewFindUtils.find(decorView, R.id.tl_10);
+        SlidingTabExPageLayout tabLayout_10 = ViewFindUtils.find(decorView, R.id.tl_10);
         /*支持缩放效果*/
         SlidingTabLayout tabLayout_11 = ViewFindUtils.find(decorView, R.id.tl_11);
 
-        tabLayout_1.setViewPager(vp,mTitles);
-        tabLayout_2.setViewPager(vp,mTitles);
+        tabLayout_1.setViewPager(vp, mTitles);
+        tabLayout_2.setViewPager(vp, mTitles);
         tabLayout_2.setOnTabSelectListener(this);
-        tabLayout_3.setViewPager(vp,mTitles);
-        tabLayout_4.setViewPager(vp,mTitles);
-        tabLayout_5.setViewPager(vp,mTitles);
-        tabLayout_6.setViewPager(vp,mTitles);
+        tabLayout_3.setViewPager(vp, mTitles);
+        tabLayout_4.setViewPager(vp, mTitles);
+        tabLayout_5.setViewPager(vp, mTitles);
+        tabLayout_6.setViewPager(vp, mTitles);
         tabLayout_7.setViewPager(vp, mTitles);
         tabLayout_8.setViewPager(vp, mTitles, this, mFragments);
-        tabLayout_9.setViewPager(vp,mTitles);
-        tabLayout_10.setViewPager(vp,mTitles);
-        tabLayout_11.setViewPager(vp,mTitles);
+        tabLayout_9.setViewPager(vp, mTitles);
+//        tabLayout_10.setViewPager(vp,mTitles);
+        tabLayout_10.setTabData(mTitles);
+        tabLayout_10.setCurrentTab(3);
+        tabLayout_10.addNewTab("测试");
+        tabLayout_10.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelect(int position) {
+                Log.e("tabLayout_10", position + "");
+            }
 
-        vp.setCurrentItem(4);
+            @Override
+            public void onTabReselect(int position) {
+
+            }
+        });
+        tabLayout_11.setViewPager(vp, mTitles);
+        tabLayout_11.setCurrentTab(5);
+
+//        vp.setCurrentItem(4);
 
         tabLayout_1.showDot(4);
         tabLayout_3.showDot(4);

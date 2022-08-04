@@ -3,12 +3,14 @@ package com.flyco.tablayout;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -115,11 +117,13 @@ public class SlidingTabLayout extends SlidingTabLayoutBase
   }
 
   //setter and getter
+  @Override
   public void setCurrentTab(int currentTab) {
     this.mCurrentTab = currentTab;
     mViewPager.setCurrentItem(currentTab);
   }
 
+  @Override
   public void setCurrentTab(int currentTab, boolean smoothScroll) {
     this.mCurrentTab = currentTab;
     mViewPager.setCurrentItem(currentTab, smoothScroll);
