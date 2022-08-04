@@ -63,7 +63,8 @@ can be used freely with other widgets together.
 
 
 >## Change Log
-
+> v1.2.0
+    - Add SlidingTabExPageLayout
   > v1.1.3
     - Fix bug
   > v1.1.2
@@ -98,7 +99,7 @@ Add a declare to module `build.gradle`
 
 ```groovy
 dependencies{
-  implementation 'com.fmy.tablayout:tablayout2:1.1.3'
+  implementation 'com.github.xingfude123:FlycoTabLayout2:1.2.0'
 }
 
 
