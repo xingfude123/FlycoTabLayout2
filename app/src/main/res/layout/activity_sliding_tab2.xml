@@ -121,13 +121,13 @@
         tl:tl_indicator_margin_right="2dp"
         tl:tl_indicator_style="BLOCK" />
 
-      <com.flyco.tablayout.SlidingTabLayout2
+      <com.flyco.tablayoutsamples.ui.SlidingTabLayoutEx2
         android:id="@+id/tl_11"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        tl:tl_indicator_color="#393E46"
+        tl:tl_indicator_color="#ff0000"
         tl:tl_textsize="25dp"
         tl:tl_selectTextSize="30dp"
         tl:tl_textSelectColor="#f00"

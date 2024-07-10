@@ -761,6 +761,19 @@ public abstract class SlidingTabLayoutBase extends HorizontalScrollView {
     return tv_tab_title;
   }
 
+  /**
+   * 放出指示器可以自由修改
+   * @return
+   */
+  public GradientDrawable getIndicatorDrawable() {
+    return mIndicatorDrawable;
+  }
+
+  /**
+   * 返回指示器
+   */
+
+
   //setter and getter
 
   // show MsgTipView

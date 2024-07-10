@@ -4,9 +4,10 @@ buildscript {
   repositories {
     google()
     jcenter()
+    mavenCentral()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:4.1.0'
+    classpath 'com.android.tools.build:gradle:4.2.2'
     classpath 'com.github.dcendents:android-maven-gradle-plugin:+'
     classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -24,6 +25,7 @@ allprojects {
     //        }
     google()
     jcenter()
+    mavenCentral()
   }
 }
 
